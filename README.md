@@ -75,6 +75,7 @@ Let's try that table definition again:
 
 ```sql
 sqlite> CREATE TABLE cats (
+        id INTEGER PRIMARY KEY,
 				name TEXT, 
 				age INTEGER
 			);
@@ -83,6 +84,9 @@ Let's break down the above code:
 
 1. use that `CREATE TABLE` command to reate a new table called "cats"
 2. Pass that command a list of column names along with the type of data they will be storing. `TEXT` means we'll be storing plain old text, `INTEGER` means we'll store a number. Note that the use of capitalization is arbitrary, but it is conventional to help separate the SQL commands from the names we make up for our tables and columns. 
+
+
+**A note on the "id" column:** Our SQLite database tables *must be indexed by a number*. We want each row in our table to have a number, which we'll call "id", just like in an excel spreadsheet. Numbering our table rows makes our data that much easier to access, update, and organize. SQLite comes with a data type designation called "Primary Key". Primary keys are unique and auto-incrementing, meaning they start at one and each new row automatically gets assigned the next numeric value. Every table we create, regardless of the other column names and data types, should be defined with an `id INTEGER PRIMARY KEY` column + data type. 
 
 Okay, let's check and make sure that we successfully created that table. To do this we'll be using SQL commands. To get a complete lis of commands, you can type `.help` into the sqlite prompt. 
 
@@ -150,6 +154,7 @@ We can look at the structure, or "schema", of our database (i.e. the tables and 
 ```sql
 sqlite> .schema
 CREATE TABLE cats(
+  id INTEGER PRIMARY KEY,
   name TEXT,
   age INTEGER,
 );
@@ -174,6 +179,7 @@ Let's check out our schema now:
 ```sql
 sqlite> .schema
 CREATE TABLE cats(
+  id INTEGER PRIMARY KEY,
   name TEXT,
   age INTEGER,
   breed TEXT
@@ -211,6 +217,7 @@ In this code along, we've been executing our SQL commands directly in the termin
 
 ```sql
 CREATE TABLE cats (
+  id INTEGER PRIMARY KEY,
 	name TEXT, 
 	age INTEGER
 );
