@@ -224,7 +224,7 @@ CREATE TABLE cats (
 3 . Execute that file in the command line: 
 
 ```sql
-sqlite> pets_database.db < 01_create_cats_table.sql
+sqlite3 pets_database.db < 01_create_cats_table.sql
 ```
 
 To carry out an subsequent action on this database––adding a column to the `cats` table, dropping that table, creating a new table––we would create subsequent `.sql` files in the text editor and execute them in the same way as above. For example, to add a column to our `cats` table:
@@ -237,5 +237,5 @@ ALTER TABLE cats ADD COLUMN breed TEXT;
 Then, execute the file: 
 
 ```sql
-sqlite> pets_database.db < 02_add_column_to_cats.sql
+sqlite3 pets_database.db < 02_add_column_to_cats.sql
 ```
