@@ -2,9 +2,15 @@
 
 ## Objectives
 
-1. Understand database structure. 
-2. Learn about the different types of data you can store in a database and how. 
-3. Learn how to create, alter and delete database tables.
+1. Describe how relational databases store data in tables composed of columns and rows.
+2. Use lower case and snake_case conventions for column names.
+3. Use the `CREATE TABLE` command to create a new table and include the `id INTEGER PRIMARY KEY`.
+4. Identify the different types of data you can store in a database.
+5. Use the `.help` command to get a complete list of SQL commands.
+6. Use the `.schema` command to look at the structure of a database.
+7. Use the `ALTER TABLE` command to add columns to a table.
+8. Use the `DROP TABLE` command to delete a table.
+9. Write SQL in a text editor. 
 
 ## Database Structure
 
@@ -18,19 +24,11 @@ Relational Databases like SQLite store data in a structure we refer to as a tabl
 
 Each column has a name, and each row contains the corresponding information about a person.
 
-Looking at this table, see if you can answer some simple questions:
-
-How many rows do we have?
-What is the age of the person in the second row?
-Find the record with the name Avi, what is the email for that record?
-
-These are some of the kinds of questions SQL allows us to ask our database about this table, which we will cover later. 
-
 ### Note on Column Names
 
-When we name columns in our database, there are a couple conventions we will follow. The first is that we will always use lowercase letters when refering to columns in our database. SQLite isn't case sensitive about its commands or column names, as we will discuss below, but it is general best practice for us to stick to lowercase for our column names.
+When we name columns in our database, there are a couple of conventions we will follow. The first is that we will always use lowercase letters when refering to columns in our database. SQLite isn't case sensitive about its commands or column names, as we will discuss below, but it is general best practice for us to stick to lowercase for our column names.
 
-The Second convention we want to follow is more important. That is that when we have multiple words in a column name we link the together use underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we would have called it something like email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
+The second convention we want to follow is more important. That is that when we have multiple words in a column name we link the together use underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we would have called it something like email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
 
 ## Database Tables
 
