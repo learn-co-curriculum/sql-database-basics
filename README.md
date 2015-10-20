@@ -7,10 +7,11 @@
 3. Use the `CREATE TABLE` command to create a new table and include the `id INTEGER PRIMARY KEY`.
 4. Identify the different types of data you can store in a database.
 5. Use the `.help` command to get a complete list of SQL commands.
-6. Use the `.schema` command to look at the structure of a database.
-7. Use the `ALTER TABLE` command to add columns to a table.
-8. Use the `DROP TABLE` command to delete a table.
-9. Write SQL in a text editor. 
+6. User the `.tables` command to list all the tables in a database.
+7. Use the `.schema` command to look at the structure of a database.
+8. Use the `ALTER TABLE` command to add columns to a table.
+9. Use the `DROP TABLE` command to delete a table.
+10. Write SQL in a text editor. 
 
 ## Database Structure
 
