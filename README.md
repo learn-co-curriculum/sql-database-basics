@@ -11,7 +11,6 @@
 7. Use the `.schema` command to look at the structure of a database.
 8. Use the `ALTER TABLE` command to add columns to a table.
 9. Use the `DROP TABLE` command to delete a table.
-10. Write SQL in a text editor. 
 
 ## Database Structure
 
@@ -205,36 +204,3 @@ sqlite> DROP TABLE cats;
 ```
 
 And that's it! You can exit out of the sqlite prompt with the `.quit` command. 
-
-### Advanced: Writing SQL in a Text Editor
-
-In this code along, we've been executing our SQL commands directly in the terminal. It is likely, however, that you will find yourself writing SQL in a file and executing that file in the context of your database. Here's how it works: 
-
-1. In the terminal, create a database just like we did earlier: `sqlite3 pets_database.db`. 
-2. Open up a text editor (such as Sublime Text) and create and save a file `01_create_cats_table.sql`. In this file, write your create statement: 
-
-```sql
-CREATE TABLE cats (
-  id INTEGER PRIMARY KEY,
-	name TEXT, 
-	age INTEGER
-);
-```
-3 . Execute that file in the command line: 
-
-```sql
-sqlite3 pets_database.db < 01_create_cats_table.sql
-```
-
-To carry out an subsequent action on this database––adding a column to the `cats` table, dropping that table, creating a new table––we would create subsequent `.sql` files in the text editor and execute them in the same way as above. For example, to add a column to our `cats` table:
-
-1. Create a file `02_add_column_to_cats.sql` and fill it out with: 
-
-```sql
-ALTER TABLE cats ADD COLUMN breed TEXT;
-```
-Then, execute the file: 
-
-```sql
-sqlite3 pets_database.db < 02_add_column_to_cats.sql
-```
