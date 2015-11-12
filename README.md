@@ -1,16 +1,19 @@
 # Database Basics 
 
+## Overview
+
+We'll cover how to create and delete database tables in SQLite as well as how to add columns to an existing table.  
+
 ## Objectives
 
-1. Describe how relational databases store data in tables composed of columns and rows.
-2. Use lower case and snake_case conventions for column names.
-3. Use the `CREATE TABLE` command to create a new table and include the `id INTEGER PRIMARY KEY`.
-4. Identify the different types of data you can store in a database.
-5. Use the `.help` command to get a complete list of SQL commands.
-6. User the `.tables` command to list all the tables in a database.
-7. Use the `.schema` command to look at the structure of a database.
-8. Use the `ALTER TABLE` command to add columns to a table.
-9. Use the `DROP TABLE` command to delete a table.
+1. Describe how relational databases store data in tables composed of columns and rows
+2. Use lower case and snake_case conventions for column names
+3. Use the `CREATE TABLE` command to create a new table with columns, including the `id` column
+4. Use the `.help` command to get a complete list of SQL commands
+5. User the `.tables` command to list all the tables in a database
+6. Use the `.schema` command to look at the structure of a database
+7. Use the `ALTER TABLE` command to add columns to a table
+8. Use the `DROP TABLE` command to delete a table
 
 ## Database Structure
 
@@ -26,25 +29,27 @@ Each column has a name, and each row contains the corresponding information abou
 
 ### Note on Column Names
 
-When we name columns in our database, there are a couple of conventions we will follow. The first is that we will always use lowercase letters when referring to columns in our database. SQLite isn't case sensitive about its commands or column names, as we will discuss below, but it is general best practice for us to stick to lowercase for our column names.
+When we name columns in our database, there are a couple of conventions we will follow. The first is that we will always use lowercase letters when referring to columns in our database. SQLite isn't case sensitive about its commands or column names, but it is general best practice for us to stick to lowercase for our column names.
 
-The second convention we want to follow is more important. That is that when we have multiple words in a column name we link the together use underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we would have called it something like email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
+The second convention we want to follow is more important. That is that when we have multiple words in a column name we link them together using underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we can name it email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
 
 ## Database Tables
 
-In the following sections, we'll cover how to create, alter and delete database tables. This reading is accompanied by a code along exercise. There are no tests to pass, but fork and clone this repository by clicking on the Github link on the top of the page. Follow along with the reading and code along instructions to learn some SQL. 
+In the following sections, we'll cover how to create, alter, and delete database tables. This reading is accompanied by a code along exercise. There are no tests to pass, but fork and clone this repository by clicking on the Github link on the top of the page. Follow along with the reading and code along instructions. 
 
 ### Create Table
 
-When we create a new database, it comes like a sort of blank slate. We need to define the tables where we store the records, the columns that hold the data for our records, and the specific type of data we are going to store in each column before we are able to store any actual data. 
+When we create a new database, it comes like a sort of blank slate.
 
-Once you create a database (which you can do with the `sqlite3 database_name.db` command), we create a table with the following line of code: 
+Once you create a database (which you can do with the `sqlite3 database_name.db` command), we create a table using the following line of code: 
 
 ```sql
 CREATE TABLE table_name;
 ```
 
-Let's give it a shot. For the purposes of this code along, we'll be creating a manipulating a database full of (you guessed it) cats!
+But before we're able to store any actual data in a table, we'll need to define the columns in the table as well as the specific type of data each column will store. 
+
+Let's give it a shot. For the purposes of this code along, we'll be creating and manipulating a database full of cats!
 
 ### Code Along I: Creating a Table
 
@@ -80,10 +85,9 @@ sqlite> CREATE TABLE cats (
 ```
 Let's break down the above code: 
 
-1. use that `CREATE TABLE` command to create a new table called "cats"
-2. Pass that command a list of column names along with the type of data they will be storing. `TEXT` means we'll be storing plain old text, `INTEGER` means we'll store a number. Note that the use of capitalization is arbitrary, but it is a convention to help separate the SQL commands from the names we make up for our tables and columns. 
-
-**A note on the "id" column:** Our SQLite database tables *must be indexed by a number*. We want each row in our table to have a number, which we'll call "id", just like in an excel spreadsheet. Numbering our table rows makes our data that much easier to access, update, and organize. SQLite comes with a data type designation called "Primary Key". Primary keys are unique and auto-incrementing, meaning they start at 1 and each new row automatically gets assigned the next numeric value. Every table we create, regardless of the other column names and data types, should be defined with an `id INTEGER PRIMARY KEY` column + data type. 
+1. Use the `CREATE TABLE` command to create a new table called "cats"
+2. Include a list of column names along with the type of data they will be storing. `TEXT` means we'll be storing plain old text, `INTEGER` means we'll store a number. Note that the use of capitalization is arbitrary, but it is a convention to help separate the SQL commands from the names we make up for our tables and columns. 
+3. Every table we create, regardless of the other column names and data types, should be defined with an `id INTEGER PRIMARY KEY` column + data type. Our SQLite database tables *must be indexed by a number*. We want each row in our table to have a number, which we'll call "id", just like in an Excel spreadsheet. Numbering our table rows makes our data that much easier to access, update, and organize. SQLite comes with a data type designation called "Primary Key". Primary keys are unique and auto-incrementing, meaning they start at 1 and each new row automatically gets assigned the next numeric value. 
 
 Okay, let's check and make sure that we successfully created that table. To do this we'll be using SQL commands. To get a complete lis of commands, you can type `.help` into the sqlite prompt. 
 
@@ -183,11 +187,9 @@ CREATE TABLE cats(
 );
 ```
 
-Notice that the `ALTER` statement isn't here, but instead SQLite has updated our original CREATE statement. The schema reflects the current structure of the database, reflected as the commands necessary to create that structure.
+Notice that the `ALTER` statement isn't here, but instead SQLite has updated our original CREATE statement. The schema reflects the current structure of the database, which is reflected as the CREATE command necessary to create that structure.
 
 * Unfortunately, altering a column name and/or deleting a column can be tricky in SQLite3. There are workarounds, however. We're not going to get into that right now, but you can explore the documentation on this topic [here](https://www.sqlite.org/lang_altertable.html).
-
-Actually, there are a handful of things other SQL systems like Postgres, or MySQL can do that are not supported by SQLite. The decision to forego support for certain SQL features is not arbitrary, and a list of those features is here. Depending on how you look at it, this is a strength or a weakness for SQLite, but you shouldn't look at it in terms of some all-informing absolute truth. Every database system has its own strengths and weaknesses, and as you learn more about them you should evaluate them thoughtfully when deciding which to use for what purpose. For us, SQLite provides a low barrier to entry, and is simple to get up and running.
 
 Fortunately, SQLite still supports most of what we'll need to use it for one way or another. For now, if you need to change a column name, it's best to simply delete the table and re-create it. 
 
