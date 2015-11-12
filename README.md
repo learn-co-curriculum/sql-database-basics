@@ -49,7 +49,7 @@ CREATE TABLE table_name;
 
 But before we're able to store any actual data in a table, we'll need to define the columns in the table as well as the specific type of data each column will store. 
 
-Let's give it a shot. For the purposes of this code along, we'll be creating and manipulating a database full of cats!
+Let's give it a shot. For the purposes of this code along, you'll be typing your commands into our terminal. 
 
 ### Code Along I: Creating a Table
 
