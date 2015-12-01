@@ -10,7 +10,7 @@ We'll cover how to create and delete database tables in SQLite as well as how to
 2. Use lower case and snake_case conventions for column names
 3. Use the `CREATE TABLE` command to create a new table with columns, including the `id` column
 4. Use the `.help` command to get a complete list of SQL commands
-5. User the `.tables` command to list all the tables in a database
+5. Use the `.tables` command to list all the tables in a database
 6. Use the `.schema` command to look at the structure of a database
 7. Use the `ALTER TABLE` command to add columns to a table
 8. Use the `DROP TABLE` command to delete a table
