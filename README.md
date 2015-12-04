@@ -206,3 +206,5 @@ sqlite> DROP TABLE cats;
 ```
 
 And that's it! You can exit out of the sqlite prompt with the `.quit` command. 
+
+-<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
