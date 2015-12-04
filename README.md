@@ -35,7 +35,7 @@ The second convention we want to follow is more important. That is that when we 
 
 ## Database Tables
 
-In the following sections, we'll cover how to create, alter, and delete database tables. This reading is accompanied by a code along exercise. There are no tests to pass, but fork and clone this repository by clicking on the Github link on the top of the page. Follow along with the reading and code along instructions. 
+In the following sections, we'll cover how to create, alter, and delete database tables. This reading is accompanied by a code along exercise that you can do in your terminal. You don't need to fork this repository, and there are no tests to pass. Follow along with the reading and code along instructions. 
 
 ### Create Table
 
@@ -49,7 +49,7 @@ CREATE TABLE table_name;
 
 But before we're able to store any actual data in a table, we'll need to define the columns in the table as well as the specific type of data each column will store. 
 
-Let's give it a shot. For the purposes of this code along, you'll be typing your commands into our terminal. 
+Let's give it a shot. For the purposes of this code along, you'll be typing your commands into your terminal. 
 
 ### Code Along I: Creating a Table
 
@@ -206,5 +206,3 @@ sqlite> DROP TABLE cats;
 ```
 
 And that's it! You can exit out of the sqlite prompt with the `.quit` command. 
-
-<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
