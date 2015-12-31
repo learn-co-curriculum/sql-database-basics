@@ -89,7 +89,7 @@ Let's break down the above code:
 2. Include a list of column names along with the type of data they will be storing. `TEXT` means we'll be storing plain old text, `INTEGER` means we'll store a number. Note that the use of capitalization is arbitrary, but it is a convention to help separate the SQL commands from the names we make up for our tables and columns. 
 3. Every table we create, regardless of the other column names and data types, should be defined with an `id INTEGER PRIMARY KEY` column + data type. Our SQLite database tables *must be indexed by a number*. We want each row in our table to have a number, which we'll call "id", just like in an Excel spreadsheet. Numbering our table rows makes our data that much easier to access, update, and organize. SQLite comes with a data type designation called "Primary Key". Primary keys are unique and auto-incrementing, meaning they start at 1 and each new row automatically gets assigned the next numeric value. 
 
-Okay, let's check and make sure that we successfully created that table. To do this we'll be using SQL commands. To get a complete lis of commands, you can type `.help` into the sqlite prompt. 
+Okay, let's check and make sure that we successfully created that table. To do this we'll be using SQL commands. To get a complete list of commands, you can type `.help` into the sqlite prompt. 
 
 ```bash
 sqlite> .help
@@ -208,3 +208,5 @@ sqlite> DROP TABLE cats;
 And that's it! You can exit out of the sqlite prompt with the `.quit` command. 
 
 -<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
