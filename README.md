@@ -209,4 +209,4 @@ And that's it! You can exit out of the sqlite prompt with the `.quit` command.
 
 -<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
-<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme' title='Database Basics'>Database Basics</a> on Learn.co and start learning to code for free.</p>
