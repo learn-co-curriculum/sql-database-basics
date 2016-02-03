@@ -31,7 +31,7 @@ Each column has a name, and each row contains the corresponding information abou
 
 When we name columns in our database, there are a couple of conventions we will follow. The first is that we will always use lowercase letters when referring to columns in our database. SQLite isn't case sensitive about its commands or column names, but it is generally best practice for us to stick to lowercase for our column names.
 
-The second convention we want to follow is more important. That is that when we have multiple words in a column name we link them together using underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we can name it email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
+The second convention we want to follow is more important. That is, when we have multiple words in a column name, we link them together using underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we can name it email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
 
 ## Database Tables
 
@@ -209,4 +209,6 @@ And that's it! You can exit out of the sqlite prompt with the `.quit` command.
 
 -<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme' title='Database Basics'>Database Basics</a> on Learn.co and start learning to code for free.</p>
+<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme'>SQL Database Basics</a> on Learn.co and start learning to code for free.</p>
