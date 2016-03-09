@@ -8,12 +8,12 @@ We'll cover how to create and delete database tables in SQLite as well as how to
 
 1. Describe how relational databases store data in tables composed of columns and rows
 2. Use lower case and snake_case conventions for column names
-3. Use the `CREATE TABLE` command to create a new table with columns, including the `id` column
+3. Use the `CREATE TABLE` keyword to create a new table with columns, including the `id` column
 4. Use the `.help` command to get a complete list of SQL commands
 5. Use the `.tables` command to list all the tables in a database
 6. Use the `.schema` command to look at the structure of a database
-7. Use the `ALTER TABLE` command to add columns to a table
-8. Use the `DROP TABLE` command to delete a table
+7. Use the `ALTER TABLE` keywords to add columns to a table
+8. Use the `DROP TABLE` keywords to delete a table
 
 ## Database Structure
 
@@ -41,7 +41,7 @@ In the following sections, we'll cover how to create, alter, and delete database
 
 When we create a new database, it comes like a sort of blank slate.
 
-Once you create a database (which you can do with the `sqlite3 database_name.db` command), we create a table using the following line of code: 
+Once you create a database (which you can do with the `sqlite3 database_name.db` command), we create a table using the following statement: 
 
 ```sql
 CREATE TABLE table_name;
@@ -49,7 +49,7 @@ CREATE TABLE table_name;
 
 But before we're able to store any actual data in a table, we'll need to define the columns in the table as well as the specific type of data each column will store. 
 
-Let's give it a shot. For the purposes of this code along, you'll be typing your commands into your terminal. 
+Let's give it a shot. For the purposes of this code along, you'll be typing these commands into your terminal. 
 
 ### Code Along I: Creating a Table
 
@@ -74,7 +74,7 @@ Error: near ";": syntax error
 
 SQLite expects us to include at least some definition of the structure of this table as well. In other words, when we create database tables, we need to specify some column names, along with the type of data we are planning to store in each column. More on data types later. 
 
-Let's try that table definition again:
+Let's try that table statement again:
 
 ```sql
 sqlite> CREATE TABLE cats (
@@ -165,7 +165,7 @@ Let's move on to altering our table.
 
 ### Alter Table
 
-Let's say that, after creating a database and creating a table to live inside that database, we decide we want to add or remove a column. We can do so with the `ALTER TABLE` command. 
+Let's say that, after creating a database and creating a table to live inside that database, we decide we want to add or remove a column. We can do so with the `ALTER TABLE` statement. 
 
 ### Code Along II: Adding, Removing and Renaming Columns
 
@@ -187,7 +187,7 @@ CREATE TABLE cats(
 );
 ```
 
-Notice that the `ALTER` statement isn't here, but instead SQLite has updated our original CREATE statement. The schema reflects the current structure of the database, which is reflected as the CREATE command necessary to create that structure.
+Notice that the `ALTER` statement isn't here, but instead SQLite has updated our original CREATE statement. The schema reflects the current structure of the database, which is reflected as the CREATE statement necessary to create that structure.
 
 * Unfortunately, altering a column name and/or deleting a column can be tricky in SQLite3. There are workarounds, however. We're not going to get into that right now, but you can explore the documentation on this topic [here](https://www.sqlite.org/lang_altertable.html).
 
@@ -195,7 +195,7 @@ Fortunately, SQLite still supports most of what we'll need to use it for one way
 
 ### Drop Table
 
-Lastly, we'll discuss how to delete a table from a database with the `DROP TABLE` command. 
+Lastly, we'll discuss how to delete a table from a database with the `DROP TABLE` statement.
 
 ### Code Along III: Deleting a Table 
 
@@ -210,3 +210,5 @@ And that's it! You can exit out of the sqlite prompt with the `.quit` command.
 -<a href='https://learn.co/lessons/sql-database-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme' title='Database Basics'>Database Basics</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme'>SQL Database Basics</a> on Learn.co and start learning to code for free.</p>
