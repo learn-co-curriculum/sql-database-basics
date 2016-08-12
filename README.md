@@ -157,7 +157,7 @@ sqlite> .schema
 CREATE TABLE cats(
   id INTEGER PRIMARY KEY,
   name TEXT,
-  age INTEGER,
+  age INTEGER
 );
 ```
 
@@ -214,3 +214,5 @@ And that's it! You can exit out of the sqlite prompt with the `.quit` command.
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme' title='Database Basics'>Database Basics</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/sql-database-basics-readme'>SQL Database Basics</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/sql-database-basics-readme'>SQL Database Basics</a> on Learn.co and start learning to code for free.</p>
