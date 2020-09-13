@@ -2,7 +2,7 @@
 
 ## Overview
 
-We'll cover how to create and delete database tables in SQLite as well as how to add columns to an existing table.  
+We'll cover how to create, delete , update database tables in SQLite as well as how to add columns to an existing table. We will also learn about WHERE keyword. 
 
 ## Objectives
 
@@ -14,7 +14,8 @@ We'll cover how to create and delete database tables in SQLite as well as how to
 6. Use the `.schema` command to look at the structure of a database
 7. Use the `ALTER TABLE` keywords to add columns to a table
 8. Use the `DROP TABLE` keywords to delete a table
-
+9. Before updating data of a table , we need to know the use of `WHERE` keyword.
+10. Use the  `UPDATE TABLE` keyword to update specific data of the table
 ## Database Structure
 
 Relational Databases like SQLite store data in a structure we refer to as a table. You can think of a table in a database a lot like you would a spreadsheet. We define specific columns in our table, and then we store any number of what we refer to as 'records' as rows in our database. A record is just information referring to one specific entity. For instance, if you had a table called "People" you could imagine a structure like this:
@@ -208,3 +209,40 @@ sqlite> DROP TABLE cats;
 And that's it! You can exit out of the sqlite prompt with the `.quit` command. 
 
 <a href='https://www.sqlite.org/lang_keywords.html'>SQL KEYWORDS</a>
+
+### Code Along IIII: WHERE keyword in SQLite
+
+WHERE keyword is used to filter the table and get the specific data from the table. Let us say we have a table named Dogs. The following code will print info of all the dogs of Pomerian Breed.
+```sql
+sqlite> SELECT * FROM Dogs
+WHERE breed='Pomerian';
+```
+
+
+### Code Along IIIII: UPDATE data in SQLite
+For this purpose UPDATE keyword is used with WHERE keyword. This following SQL syntax will update the breed name of the dogs from Pomerian to Lebrador in the table named Dogs. Then the select keyword is used to print the updated Dogs table.
+```sql
+sqlite> UPDATE Dogs
+set Dog Name= 'Lebrador'
+WHERE breed='Pomerian'
+Select * from Dogs;
+```
+
+to be continued......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
