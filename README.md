@@ -31,7 +31,7 @@ Each column has a name, and each row contains the corresponding information abou
 
 When we name columns in our database, there are a couple of conventions we will follow. The first is that we will always use lowercase letters when referring to columns in our database. SQLite isn't case sensitive about its commands or column names, but it is generally best practice for us to stick to lowercase for our column names.
 
-The second convention we want to follow is more important. That is, when we have multiple words in a column name, we link them together using underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we can name it email_address. If we wanted to split up name to first and last we might have columns called first_name and last_name.
+The second convention we want to follow is more important. That is, when we have multiple words in a column name, we link them together using underscores rather than spaces. We call this convention "snake_case". So, for instance, if we wanted to be more specific with our email column above, we can name it email\_address. If we wanted to split up name to first and last we might have columns called first\_name and last\_name.
 
 ## Database Tables
 
@@ -78,10 +78,10 @@ Let's try that table statement again:
 
 ```sql
 sqlite> CREATE TABLE cats (
-        id INTEGER PRIMARY KEY,
-				name TEXT, 
-				age INTEGER
-			);
+  id INTEGER PRIMARY KEY,
+  name TEXT, 
+  age INTEGER
+);
 ```
 Let's break down the above code: 
 
@@ -91,7 +91,7 @@ Let's break down the above code:
 
 Okay, let's check and make sure that we successfully created that table. To do this we'll be using SQL commands. To get a complete list of commands, you can type `.help` into the sqlite prompt. 
 
-```bash
+```
 sqlite> .help
 .backup ?DB? FILE      Backup DB (default "main") to FILE
 .bail ON|OFF           Stop after hitting an error.  Default OFF
