@@ -21,9 +21,9 @@ Relational Databases like SQLite store data in a structure we refer to as a tabl
 
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
-    <th> name </th>
-    <th> age </th>
-    <th> email </th>
+    <th>name</th>
+    <th>age</th>
+    <th>email</th>
   </tr>
   
   <tr>
