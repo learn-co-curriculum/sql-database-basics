@@ -51,7 +51,8 @@ table called "People" you could imagine a structure like this:
   </tr>
 </table>
 
-Each column has a name, and each row contains the corresponding information about a person.
+Each column has a name, and each row contains the corresponding information
+about a person.
 
 ### Note on Column Names
 
@@ -93,7 +94,8 @@ these commands into your terminal.
 
 ### Code Along I: Creating a Table
 
-* In the terminal let's create our new database and start sqlite3 by running the following:
+* In the terminal let's create our new database and start sqlite3 by running the
+  following:
 
 ```sql
 sqlite3 pet_database.db
@@ -128,7 +130,7 @@ CREATE TABLE cats (
 
 Let's break down the above code:
 
-1. Use the `CREATE TABLE` command to create a new table called "cats"
+1. Use the `CREATE TABLE` command to create a new table called "cats".
 2. Include a list of column names along with the type of data they will be
    storing. `TEXT` means we'll be storing plain old text, `INTEGER` means we'll
    store a number. Note that the use of capitalization is arbitrary, but it is a
@@ -265,7 +267,7 @@ structure.
 
 Unfortunately, altering a column name and/or deleting a column can be tricky in
 SQLite3. There are workarounds, however. We're not going to get into that right
-now, but you can explore the documentation on this topic [here](https://www.sqlite.org/lang_altertable.html).
+now, but you can explore the [documentation on this topic](https://www.sqlite.org/lang_altertable.html).
 
 Fortunately, SQLite still supports most of what we'll need one way or another.
 For now, if you need to change a column name, it's best to simply delete the
@@ -273,7 +275,8 @@ table and re-create it.
 
 ### Drop Table
 
-Lastly, we'll discuss how to delete a table from a database with the `DROP TABLE` statement.
+Lastly, we'll discuss how to delete a table from a database with the `DROP
+TABLE` statement.
 
 ### Code Along III: Deleting a Table
 
