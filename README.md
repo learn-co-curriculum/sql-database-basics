@@ -159,6 +159,7 @@ sqlite> .help
 .timer ON|OFF          Turn the CPU timer measurement on or off
 ```
 
+
 Woah, that's a lot. Don't worry too much about all of these different commands right now. Just know that you can always use `.help` to check out the available options. 
 
 Okay, let's check out our new table. To list all the tables in the database we'll use the .tables command. Type it into the sqlite prompt and hit enter, you should get:
