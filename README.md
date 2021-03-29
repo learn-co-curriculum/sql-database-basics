@@ -271,4 +271,6 @@ DROP TABLE cats;
 
 And that's it! You can exit out of the sqlite prompt with the `.quit` command.
 
-[SQL keywords](https://www.sqlite.org/lang_keywords.html)
+## Resources
+
+- [SQL keywords](https://www.sqlite.org/lang_keywords.html)
