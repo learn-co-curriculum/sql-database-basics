@@ -27,12 +27,29 @@ number of what we refer to as 'records' as rows in our database. A record is
 just information referring to one specific entity. For instance, if you had a
 table called "People" you could imagine a structure like this:
 
-| name      | age | email |
-| ----------- | ----------- | ----------- |
-| Bob      | 29       | bob@flatironschool.com |
-| Avi   | 28        | avi@flatironschool.com |
-| Adam | 28 | adam@flatironschool.com |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>email</th>
+  </tr>
 
+  <tr>
+    <td>Bob</td>
+    <td>29</td>
+    <td>bob@flatironschool.com</td>
+  </tr>
+  <tr>
+    <td>Avi</td>
+    <td>28</td>
+    <td>avi@flatironschool.com</td>
+  </tr>
+  <tr>
+    <td>Adam</td>
+    <td>28</td>
+    <td>adam@flatironschool.com</td>
+  </tr>
+</table>
 
 Each column has a name, and each row contains the corresponding information
 about a person.
