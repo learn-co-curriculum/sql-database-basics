@@ -149,6 +149,7 @@ Let's break down the above code:
 Okay, let's check and make sure that we successfully created that table. To do
 this we'll be using SQL commands. To get a complete list of commands, you can
 type `.help` into the sqlite prompt.
+
 ![Sqlite help output](https://curriculum-content.s3.amazonaws.com/phase-3/database-basics/sqlite-help.png)
 
 Woah, that's a lot. Don't worry too much about all of these different commands
